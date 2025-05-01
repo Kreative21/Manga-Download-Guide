@@ -1,4 +1,4 @@
-# Manga Downloader Guide Using Google Colab - By [Your Name] 📚
+# Manga Downloader Guide Using Google Colab - By Ronak 📚
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)]([https://colab.research.google.com/github/yourusername/your-repo-name/blob/main/your-notebook.ipynb](https://colab.research.google.com/drive/1gCiQ0GD-CG8aa90iYfl3R-8zayVyIYfU))
 
