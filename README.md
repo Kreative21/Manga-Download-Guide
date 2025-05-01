@@ -1,6 +1,6 @@
 # Manga Downloader Guide Using Google Colab - By Ronak 📚
 
-[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)]([https://colab.research.google.com/github/yourusername/your-repo-name/blob/main/your-notebook.ipynb](https://colab.research.google.com/drive/1gCiQ0GD-CG8aa90iYfl3R-8zayVyIYfU))
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1gCiQ0GD-CG8aa90iYfl3R-8zayVyIYfU)
 
 *Download manga chapters directly in your browser as high-quality PDFs - No installations required!*
 
@@ -23,7 +23,7 @@
 ## 🚀 3-Step Guide
 
 ### 1️⃣ **Launch Colab Notebook**
-- Click the [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)] badge above
+- Click the [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1gCiQ0GD-CG8aa90iYfl3R-8zayVyIYfU) badge above
 - Sign in with your Google account if prompted
 
 ---
