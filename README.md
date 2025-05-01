@@ -6,7 +6,7 @@
 
 ---
 
-## ✨ Top 10 Features
+## ✨ Features
 - 🌐 **Web-Based** - No software installs needed
 - 🖼️ **HD Quality** - Preserves original image resolution
 - 🔒 **Virus-Free** - 100% secure cloud processing
