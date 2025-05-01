@@ -23,7 +23,7 @@
 ## 🚀 3-Step Guide
 
 ### 1️⃣ **Launch Colab Notebook**
-- Click the [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1gCiQ0GD-CG8aa90iYfl3R-8zayVyIYfU) badge above
+- Click the [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1gCiQ0GD-CG8aa90iYfl3R-8zayVyIYfU) badge
 - Sign in with your Google account if prompted
 
 ---
