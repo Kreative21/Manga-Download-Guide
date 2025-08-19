@@ -113,9 +113,10 @@ if os.path.exists(output_dir):
 else:
     print("Download directory missing!")
 ```
+### **Run all the cells in order**
 ---
 
-### 3️⃣ **Download Your Manga**
+### 4️⃣ **Download Your Manga**
 - After final cell completes:
   1. Click 📁 **Files** icon in left sidebar
   2. Find **manga_output.pdf**
