@@ -121,7 +121,7 @@ else:
 ### 4️⃣ **Download Your Manga**
 - After final cell completes:
   1. Click 📁 **Files** icon in left sidebar
-  2. Find **manga_output.pdf**
+  2. Find **manga_name.zip**
   3. Click ⬇️ download button next to file
 
 ---
@@ -136,7 +136,7 @@ else:
 ## 💡 Pro Tips
 - For stuck cells: **Runtime → Restart runtime**
 - Mobile users: Use desktop mode for full controls
-- Need help? Screenshot error messages
+- Need help? Screenshot error messages and send it to me
 - Close Colab tab after download to save resources
 
 **Enjoy your manga reading!** 🎉
