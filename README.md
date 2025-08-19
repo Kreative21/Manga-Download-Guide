@@ -20,19 +20,99 @@
 
 ---
 
-## 🚀 3-Step Guide
+## 🚀 Step-by-Step Guide
 
-### 1️⃣ **Launch Colab Notebook**
-- Click the [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1gCiQ0GD-CG8aa90iYfl3R-8zayVyIYfU) badge
-- Sign in with your Google account if prompted
+### 1️⃣ **Open Google Colab**
+- Go to [Google Colab](https://colab.research.google.com)
+
+- If you are on **Mobile** then open in **Desktop Mode** for better view
+
+- Click **`File`** in the top menu → Select **`New Notebook`**
 
 ---
 
-### 2️⃣ **Run All Cells**
-1. Click **Runtime** in top menu → **Run all** (Ctrl+F9)
-2. When prompted, enter manga URL in the input box
-3. **Wait** for each cell to fully complete before proceeding
+### 2️⃣ **Create Your First Code Cell**
+- In your new notebook, you'll see a blank box with "Type code here" (this is a code cell)
 
+- Click inside the box to activate it
+
+---
+
+### 3️⃣ **Code**
+- **Copy paste this code in the first cell:**
+```
+!git clone https://github.com/Yui007/weebcentral_downloader
+# Install required libraries
+!pip install requests beautifulsoup4 selenium tqdm IPython ipywidgets img2pdf natsort
+```
+- **Copy paste this code in the second cell:**
+```
+%cd /content/weebcentral_downloader
+!python weebcentral_scraper_colab.py
+```
+- **Copy paste this code in the third cell:**
+```
+import os
+import shutil
+import img2pdf
+from natsort import natsorted
+
+output_dir = '/content/weebcentral_downloader/manga_downloads'
+
+if os.path.exists(output_dir):
+    manga_folders = [d for d in os.listdir(output_dir) if os.path.isdir(os.path.join(output_dir, d))]
+
+    if manga_folders:
+        print("Available manga folders:")
+        for i, folder in enumerate(manga_folders, 1):
+            print(f"{i}. {folder}")
+
+        choice = int(input("\nEnter the number of the folder to process: ")) - 1
+        if 0 <= choice < len(manga_folders):
+            folder_name = manga_folders[choice]
+            folder_path = os.path.join(output_dir, folder_name)
+
+            # Process each chapter
+            for chapter_dir in os.listdir(folder_path):
+                chapter_path = os.path.join(folder_path, chapter_dir)
+                if os.path.isdir(chapter_path):
+                    images = []
+                    # Collect all valid image files
+                    for f in os.listdir(chapter_path):
+                        if f.lower().endswith(('.png', '.jpg', '.jpeg')):
+                            images.append(os.path.join(chapter_path, f))
+
+                    if images:
+                        # Natural sort images for proper order
+                        images = natsorted(images)
+                        pdf_path = os.path.join(folder_path, f"{chapter_dir}.pdf")
+
+                        # Convert to PDF
+                        with open(pdf_path, 'wb') as pdf_file:
+                            pdf_file.write(img2pdf.convert(images))
+
+                        # Cleanup images and empty folder
+                        for img in images:
+                            os.remove(img)
+                        os.rmdir(chapter_path)
+                        print(f"Converted: {chapter_dir} → {chapter_dir}.pdf")
+                    else:
+                        print(f"Skipped empty chapter: {chapter_dir}")
+
+            # Zip optional
+            if input("\nZip PDFs? (y/n): ").lower() == 'y':
+                zip_path = f"/content/{folder_name}.zip"
+                shutil.make_archive(f"/content/{folder_name}", 'zip', folder_path)
+                print(f"\n✅ Zip created: {zip_path}")
+            else:
+                print("\nSkipped zip creation")
+        else:
+            print("Invalid selection!")
+    else:
+        print("No manga folders found!")
+else:
+    print("Download directory missing!")
+```
 ---
 
 ### 3️⃣ **Download Your Manga**
