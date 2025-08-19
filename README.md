@@ -50,6 +50,7 @@
 %cd /content/weebcentral_downloader
 !python weebcentral_scraper_colab.py
 ```
+**Enter your manga URL from weebcentral.com after running this code**
 - **Copy paste this code in the third cell:**
 ```
 import os
